@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">wordBook</string>
+    <string name="toolbar_name">--- 단어장</string>
+</resources>
