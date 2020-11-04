@@ -23,6 +23,7 @@
             android:text="@string/toolbar_name"
             android:textSize="20dp"
             android:textColor="@color/white"
+            android:textStyle="bold"
             />
     </Toolbar>
 
@@ -59,7 +60,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/wordImg2"
+                android:id="@+id/myImg"
                 android:src="@drawable/sample"/>
         </LinearLayout>
         <LinearLayout
