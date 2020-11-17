@@ -1,7 +1,7 @@
 package com.example.wordbook;
 
 public class word {
-    private String engWord;
+    private    String engWord;
     private String krWord;
 
     public String getEngWord() {
