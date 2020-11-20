@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     ImageView wordImg, myImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         wordImg = (ImageView) findViewById(R.id.wordImg);
         myImg = (ImageView) findViewById(R.id.myImg);
+
 
         wordImg.setOnClickListener(new View.OnClickListener() {
             @Override

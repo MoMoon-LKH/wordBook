@@ -16,12 +16,19 @@ public class myWord extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_word);
 
+        init();
+    }
+
+
+    void init() {
         myRecyclerView = (RecyclerView) findViewById(R.id.myRecyclerView);
 
-        LinearLayoutManager linearLayoutManager =  new LinearLayoutManager(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(linearLayoutManager);
-        myRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL),1);
+        myRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL), 1);
         adapter = new wordRecyclerAdapter();
         myRecyclerView.setAdapter(adapter);
+
+        adapter.notifyDataSetChanged();
     }
 }
