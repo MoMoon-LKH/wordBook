@@ -1,5 +1,9 @@
 package com.example.wordbook;
 
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +17,11 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder> {
     private ArrayList<listData> listData = new ArrayList<>(); //wordbook 이름 리스트
+     private Context mContext;
+
+    RecyclerAdapter(Context mContext){
+        this.mContext = mContext;
+    }
 
         @NonNull
         @Override
@@ -21,6 +30,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
                 return new ItemViewHolder(view,viewType);
 
     }
+
 
     void itemAdd(listData data){
         listData.add(data);
@@ -33,25 +43,38 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
 
     }
 
+
+
     @Override
     public int getItemCount() {
         return listData.size();
     }
 
     class ItemViewHolder extends RecyclerView.ViewHolder {
-
-        private TextView textWordList;
-        private Button btnStart;
+        Button btnStart;
+        TextView textWordList;
 
         ItemViewHolder(View itemView, int viewType){
             super(itemView);
             textWordList = itemView.findViewById(R.id.textWordList);
             btnStart = itemView.findViewById(R.id.btnStart);
+
+            btnStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext,wordScreen.class);
+                    mContext.startActivity(intent);
+                }
+            });
+
         }
+
 
         public void onBind(listData data) {
             textWordList.setText(data.getWordBook());
             btnStart.setText("시작");
+
+
         }
 
 

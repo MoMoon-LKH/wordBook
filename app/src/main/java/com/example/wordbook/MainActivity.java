@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.wordImg) {
-                    Intent intent = new Intent(getApplicationContext(), wordList.class);
+                    Intent intent = new Intent(getApplicationContext(),wordList.class);
                     startActivity(intent);
                 }
             }
