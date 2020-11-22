@@ -63,6 +63,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext,wordScreen.class);
+                    intent.putExtra("pos",getAdapterPosition());
+                    intent.putExtra("txt",textWordList.getText().toString());
+
                     mContext.startActivity(intent);
                 }
             });
