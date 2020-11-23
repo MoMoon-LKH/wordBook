@@ -20,6 +20,6 @@ public class loading extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 finish();
             }
-        },2000);
+        },2500);
     }
 }

@@ -2,6 +2,7 @@ package com.example.wordbook;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -39,6 +40,8 @@ public class WordDBHelper extends SQLiteOpenHelper {
                 WordContract.WordEntry.COL_ENG + " TEXT, " +
                 WordContract.WordEntry.COL_KR + " TEXT);");
 
+        Log.d("db","DB Create Success");
+
         dbValues(db);
 
     }
@@ -48,6 +51,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE1);
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE2);
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE3);
+        Log.d("db","DB Drop");
         onCreate(db);
     }
 
@@ -61,7 +65,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE1,"candidate","n. 후보자, 지원자");
         dbInsert(db, WordContract.WordEntry.TABLE1,"confidence","n. 확신, 자신; 신임");
         dbInsert(db, WordContract.WordEntry.TABLE1,"highly","adv. 매우, 대단히");
-        dbInsert(db, WordContract.WordEntry.TABLE1,"professional","adj. 전문적인, 직업의\nn. 전문가");
+        dbInsert(db,WordContract.WordEntry.TABLE1,"professional","adj. 전문적인, 직업의\nn. 전문가");
 
         dbInsert(db, WordContract.WordEntry.TABLE2,"interview","n. 면접\nv. 면접을 보다");
         dbInsert(db, WordContract.WordEntry.TABLE2,"hire","v. 고용하다");
@@ -74,16 +78,37 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE2,"eligible","adj. 자격이 있는, 적격의");
         dbInsert(db, WordContract.WordEntry.TABLE2,"identify","v. 알아보다");
 
-
-
     }
 
-    void dbInsert(SQLiteDatabase db ,String table, String eng, String kr){
+    void dbInsert(SQLiteDatabase db,String table, String eng, String kr){
         Log.d("db","insert: " + table +" ,"+ eng +" ,"+ kr );
         ContentValues contentValues = new ContentValues();
         contentValues.put(WordContract.WordEntry.COL_ENG,eng);
         contentValues.put(WordContract.WordEntry.COL_KR,kr);
 
         db.insert(table,null,contentValues);
+    }
+
+    public Cursor recordReadCursor1(SQLiteDatabase db, int pos){
+        db = getReadableDatabase();
+        String[] tableCol = {
+                WordContract.WordEntry.COL_ENG,
+                WordContract.WordEntry.COL_KR
+        };
+
+        Cursor cursor = db.query(WordContract.WordEntry.TABLE1,tableCol,null,null,null,null,null);
+        return cursor;
+    }
+
+    public Cursor recordReadCursor2(SQLiteDatabase db, int pos){
+        db = getReadableDatabase();
+
+        String[] tableCol = {
+                WordContract.WordEntry.COL_ENG,
+                WordContract.WordEntry.COL_KR
+        };
+
+        Cursor cursor = db.query(WordContract.WordEntry.TABLE2,tableCol,null,null,null,null,null);
+        return cursor;
     }
 }

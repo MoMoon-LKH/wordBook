@@ -3,6 +3,7 @@ package com.example.wordbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        WordDBHelper wordDBHelper = new WordDBHelper(this, WordDBHelper.DB_NAME, null, WordDBHelper.DB_VERSION);
+        SQLiteDatabase db = wordDBHelper.getWritableDatabase();
+        db.close();
+        wordDBHelper.close();
 
 
     }
