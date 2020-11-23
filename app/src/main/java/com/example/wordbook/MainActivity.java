@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
         wordImg = (ImageView) findViewById(R.id.wordImg);
         myImg = (ImageView) findViewById(R.id.myImg);
 

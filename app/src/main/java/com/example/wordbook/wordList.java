@@ -46,7 +46,7 @@ public class wordList extends AppCompatActivity {
 
 
     private void getData(){
-        List<String> listBook = Arrays.asList("토익 단어(1)","토익 단어(2)");
+        List<String> listBook = Arrays.asList("토익 단어 (1)","토익 단어 (2)");
 
         for(int i = 0; i < listBook.size(); i++){
             listData data = new listData();
