@@ -35,7 +35,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
                 WordContract.WordEntry.COL_KR + " TEXT);");
 
 
-        db.execSQL("create table if not exists " + WordContract.WordEntry.TABLE3 + "(" +
+        db.execSQL("create table if not exists " + WordContract.WordEntry.TABLE_MY + "(" +
                 WordContract.WordEntry.id + " integer primary key autoincrement not null, " +
                 WordContract.WordEntry.COL_ENG + " TEXT, " +
                 WordContract.WordEntry.COL_KR + " TEXT);");
@@ -50,7 +50,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE1);
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE2);
-        db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE3);
+        db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE_MY);
         Log.d("db","DB Drop");
         onCreate(db);
     }
@@ -61,7 +61,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE1,"applicant","n. 지원자, 신청자");
         dbInsert(db, WordContract.WordEntry.TABLE1,"requirement","n. 필요조건, 요건");
         dbInsert(db, WordContract.WordEntry.TABLE1,"meet","v. (필요·요구 등을) 만족시키다");
-        dbInsert(db, WordContract.WordEntry.TABLE1,"qualified","adj. 자격있는 적격의");
+        dbInsert(db, WordContract.WordEntry.TABLE1,"qualified","adj. 자격있는, 적격의");
         dbInsert(db, WordContract.WordEntry.TABLE1,"candidate","n. 후보자, 지원자");
         dbInsert(db, WordContract.WordEntry.TABLE1,"confidence","n. 확신, 자신; 신임");
         dbInsert(db, WordContract.WordEntry.TABLE1,"highly","adv. 매우, 대단히");
@@ -73,7 +73,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE2,"position","n. 일자리, 직책\nv. 두다");
         dbInsert(db, WordContract.WordEntry.TABLE2,"reference","n. 추천서; 참고");
         dbInsert(db, WordContract.WordEntry.TABLE2,"achievement","n. 성취, 달성");
-        dbInsert(db, WordContract.WordEntry.TABLE2,"impressed","adj. 인상 깊게 생각하는\n     감명을 받은");
+        dbInsert(db, WordContract.WordEntry.TABLE2,"impressed","adj. 인상 깊게 생각하는\n감명을 받은");
         dbInsert(db, WordContract.WordEntry.TABLE2,"excellent","adj. 휼륭한, 탁월한");
         dbInsert(db, WordContract.WordEntry.TABLE2,"eligible","adj. 자격이 있는, 적격의");
         dbInsert(db, WordContract.WordEntry.TABLE2,"identify","v. 알아보다");
@@ -89,7 +89,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         db.insert(table,null,contentValues);
     }
 
-    public Cursor recordReadCursor1(SQLiteDatabase db, int pos){
+    public Cursor recordReadCursor1(SQLiteDatabase db){
         db = getReadableDatabase();
         String[] tableCol = {
                 WordContract.WordEntry.COL_ENG,
@@ -100,7 +100,19 @@ public class WordDBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor recordReadCursor2(SQLiteDatabase db, int pos){
+    public Cursor recordReadCursor2(SQLiteDatabase db){
+        db = getReadableDatabase();
+
+        String[] tableCol = {
+                WordContract.WordEntry.COL_ENG,
+                WordContract.WordEntry.COL_KR
+        };
+
+        Cursor cursor = db.query(WordContract.WordEntry.TABLE2,tableCol,null,null,null,null,null);
+        return cursor;
+    }
+
+    public Cursor recordReadCursorMy(SQLiteDatabase db){
         db = getReadableDatabase();
 
         String[] tableCol = {

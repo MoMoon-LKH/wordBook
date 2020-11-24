@@ -48,18 +48,15 @@
         <TextView
             android:id="@+id/screenEngTxt"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="140dp"
             android:gravity="center"
-            android:text="sd"
-            android:textSize="40dp"
             />
         <TextView
             android:id="@+id/screenKrTxt"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="120dp"
             android:gravity="center"
-            android:text="sd"
-            android:textSize="32dp"/>
+            />
 
     </LinearLayout>
     <LinearLayout
