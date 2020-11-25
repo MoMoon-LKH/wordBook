@@ -60,7 +60,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE1,"opening","n. 공석, 결원; 개장, 개시");
         dbInsert(db, WordContract.WordEntry.TABLE1,"applicant","n. 지원자, 신청자");
         dbInsert(db, WordContract.WordEntry.TABLE1,"requirement","n. 필요조건, 요건");
-        dbInsert(db, WordContract.WordEntry.TABLE1,"meet","v. (필요·요구 등을) 만족시키다");
+        dbInsert(db, WordContract.WordEntry.TABLE1,"meet","v. 만족시키다");
         dbInsert(db, WordContract.WordEntry.TABLE1,"qualified","adj. 자격있는, 적격의");
         dbInsert(db, WordContract.WordEntry.TABLE1,"candidate","n. 후보자, 지원자");
         dbInsert(db, WordContract.WordEntry.TABLE1,"confidence","n. 확신, 자신; 신임");
@@ -73,7 +73,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE2,"position","n. 일자리, 직책\nv. 두다");
         dbInsert(db, WordContract.WordEntry.TABLE2,"reference","n. 추천서; 참고");
         dbInsert(db, WordContract.WordEntry.TABLE2,"achievement","n. 성취, 달성");
-        dbInsert(db, WordContract.WordEntry.TABLE2,"impressed","adj. 인상 깊게 생각하는\n       감명을 받은");
+        dbInsert(db, WordContract.WordEntry.TABLE2,"impressed","adj. 인상 깊게 생각하는\n 감명을 받은");
         dbInsert(db, WordContract.WordEntry.TABLE2,"excellent","adj. 휼륭한, 탁월한");
         dbInsert(db, WordContract.WordEntry.TABLE2,"eligible","adj. 자격이 있는, 적격의");
         dbInsert(db, WordContract.WordEntry.TABLE2,"identify","v. 알아보다");

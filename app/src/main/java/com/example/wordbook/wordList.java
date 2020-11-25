@@ -23,10 +23,7 @@ public class wordList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_list);
 
-       
-
         recyclerView = (RecyclerView) findViewById(R.id.wordListView);
-
 
         LinearLayoutManager linearLayoutManager =  new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -37,8 +34,6 @@ public class wordList extends AppCompatActivity {
         getData();
 
     }
-
-
 
 
     private void getData(){

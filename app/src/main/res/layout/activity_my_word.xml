@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="내 단어장"
+                android:text="나의 단어장"
                 android:textSize="20dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"

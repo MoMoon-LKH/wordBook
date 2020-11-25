@@ -21,16 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         wordImg = (ImageView) findViewById(R.id.wordImg);
         myImg = (ImageView) findViewById(R.id.myImg);
-
         wordDBHelper = new WordDBHelper(this, WordDBHelper.DB_NAME, null, WordDBHelper.DB_VERSION);
         db = wordDBHelper.getReadableDatabase();
-
         btnListener();
-
-
 
     }
 
@@ -48,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         myImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (v.getId() == R.id.myImg) {
                     if(MyTableCount() <= 0)
                         alertDlg();
@@ -59,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     int MyTableCount(){
@@ -81,6 +76,5 @@ public class MainActivity extends AppCompatActivity {
         wordDBHelper.close();
         super.onDestroy();
     }
-
 
 }

@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -52,8 +54,8 @@ public class wordScreen extends AppCompatActivity {
         setCursor();
         printNextWord();
 
-        screenEngTxt.setTextSize(TypedValue.COMPLEX_UNIT_DIP,55);
-        screenKrTxt.setTextSize(TypedValue.COMPLEX_UNIT_DIP,30);
+        screenEngTxt.setTextSize(55);
+        screenKrTxt.setTextSize(32);
 
     }
 
@@ -82,7 +84,15 @@ public class wordScreen extends AppCompatActivity {
             public void onClick(View v) {
                 wordDBHelper.dbInsert(db, WordContract.WordEntry.TABLE_MY,
                         screenEngTxt.getText().toString(),screenKrTxt.getText().toString());
-                Toast.makeText(wordScreen.this, "나의 단어장에 저장되었습니다", Toast.LENGTH_SHORT).show();
+                final Toast toast = Toast.makeText(wordScreen.this, "나의 단어장에 저장되었습니다",Toast.LENGTH_SHORT);
+                toast.show();
+                Handler handler = new Handler(Looper.myLooper());
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        toast.cancel();
+                    }
+                },900);
             }
         });
     }
