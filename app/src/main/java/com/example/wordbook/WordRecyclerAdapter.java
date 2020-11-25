@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class wordRecyclerAdapter extends RecyclerView.Adapter<wordRecyclerAdapter.ItemViewHolder> {
-    private ArrayList<word> words = new ArrayList<>();
+public class WordRecyclerAdapter extends RecyclerView.Adapter<WordRecyclerAdapter.ItemViewHolder> {
+        private ArrayList<Word> words = new ArrayList<Word>();
+        int i = 0;
 
     @NonNull
     @Override
@@ -21,8 +22,8 @@ public class wordRecyclerAdapter extends RecyclerView.Adapter<wordRecyclerAdapte
 
     }
 
-    void itemAdd(word words){
-
+    void itemAdd(Word word){
+        words.add(word);
     }
 
 
@@ -46,12 +47,13 @@ public class wordRecyclerAdapter extends RecyclerView.Adapter<wordRecyclerAdapte
             engTxt = itemView.findViewById(R.id.engTxt);
             krTxt = itemView.findViewById(R.id.krTxt);
 
-        }
-
-        public void onBind(word words) {
 
         }
 
+        public void onBind(Word word) {
+            engTxt.setText(word.getEngWord());
+            krTxt.setText(word.getKrWord());
 
+        }
     }
 }

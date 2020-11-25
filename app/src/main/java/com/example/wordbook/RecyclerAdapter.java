@@ -43,12 +43,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
 
     }
 
-
-
     @Override
     public int getItemCount() {
         return listData.size();
     }
+
+
 
     class ItemViewHolder extends RecyclerView.ViewHolder {
         Button btnStart;

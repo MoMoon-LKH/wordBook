@@ -1,8 +1,13 @@
 package com.example.wordbook;
 
-public class word {
-    private    String engWord;
+public class Word {
+    private String engWord;
     private String krWord;
+
+    Word(String engWord, String krWord){
+        this.engWord = engWord;
+        this.krWord = krWord;
+    }
 
     public String getEngWord() {
         return engWord;

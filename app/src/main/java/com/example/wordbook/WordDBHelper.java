@@ -73,7 +73,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
         dbInsert(db, WordContract.WordEntry.TABLE2,"position","n. 일자리, 직책\nv. 두다");
         dbInsert(db, WordContract.WordEntry.TABLE2,"reference","n. 추천서; 참고");
         dbInsert(db, WordContract.WordEntry.TABLE2,"achievement","n. 성취, 달성");
-        dbInsert(db, WordContract.WordEntry.TABLE2,"impressed","adj. 인상 깊게 생각하는\n감명을 받은");
+        dbInsert(db, WordContract.WordEntry.TABLE2,"impressed","adj. 인상 깊게 생각하는\n       감명을 받은");
         dbInsert(db, WordContract.WordEntry.TABLE2,"excellent","adj. 휼륭한, 탁월한");
         dbInsert(db, WordContract.WordEntry.TABLE2,"eligible","adj. 자격이 있는, 적격의");
         dbInsert(db, WordContract.WordEntry.TABLE2,"identify","v. 알아보다");
@@ -90,7 +90,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor recordReadCursor1(SQLiteDatabase db){
-        db = getReadableDatabase();
+
         String[] tableCol = {
                 WordContract.WordEntry.COL_ENG,
                 WordContract.WordEntry.COL_KR
@@ -101,7 +101,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor recordReadCursor2(SQLiteDatabase db){
-        db = getReadableDatabase();
+
 
         String[] tableCol = {
                 WordContract.WordEntry.COL_ENG,
@@ -113,14 +113,14 @@ public class WordDBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor recordReadCursorMy(SQLiteDatabase db){
-        db = getReadableDatabase();
+
 
         String[] tableCol = {
                 WordContract.WordEntry.COL_ENG,
                 WordContract.WordEntry.COL_KR
         };
 
-        Cursor cursor = db.query(WordContract.WordEntry.TABLE2,tableCol,null,null,null,null,null);
+        Cursor cursor = db.query(WordContract.WordEntry.TABLE_MY,tableCol,null,null,null,null,null);
         return cursor;
     }
 }
