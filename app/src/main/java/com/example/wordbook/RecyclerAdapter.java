@@ -64,13 +64,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
                     Intent intent = new Intent(mContext,wordScreen.class);
                     intent.putExtra("pos",getAdapterPosition());
                     intent.putExtra("txt",textWordList.getText().toString());
-
                     mContext.startActivity(intent);
                 }
             });
 
         }
-
 
         public void onBind(listData data) {
             textWordList.setText(data.getWordBook());

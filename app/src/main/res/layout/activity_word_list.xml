@@ -11,25 +11,28 @@
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="1">
-    <Toolbar
+    android:layout_weight="0.9">
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/listToolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:minHeight="50dp"
         android:background="@color/yellow"
         android:layout_weight="1"
+        android:minHeight="?attr/actionBarSize"
+
+        android:theme="@style/Theme.AppCompat"
         >
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_gravity="center"
             android:text="단어장 목록"
             android:textSize="22dp"
             android:textColor="@color/white"
             android:textStyle="bold"
             />
-    </Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

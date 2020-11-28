@@ -46,8 +46,6 @@ public class WordRecyclerAdapter extends RecyclerView.Adapter<WordRecyclerAdapte
             super(itemView);
             engTxt = itemView.findViewById(R.id.engTxt);
             krTxt = itemView.findViewById(R.id.krTxt);
-
-
         }
 
         public void onBind(Word word) {

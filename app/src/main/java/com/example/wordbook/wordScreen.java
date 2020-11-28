@@ -1,6 +1,8 @@
 package com.example.wordbook;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -11,6 +13,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,6 +27,7 @@ public class wordScreen extends AppCompatActivity {
     int pos;
     int num = 0;
     Cursor cursor;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,13 @@ public class wordScreen extends AppCompatActivity {
         btnMy = (Button) findViewById(R.id.btnMy);
         btnNext = (Button) findViewById(R.id.btnNext);
         btnBack.setVisibility(View.INVISIBLE);
+
+        toolbar = (Toolbar) findViewById(R.id.wordToolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
+
 
         wordDBHelper = new WordDBHelper(this, WordDBHelper.DB_NAME, null, WordDBHelper.DB_VERSION);
         db = wordDBHelper.getWritableDatabase(); //my table에 단어 저장
@@ -94,6 +105,16 @@ public class wordScreen extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home :
+                finish();
+                return true;
+        }
+        return false;
     }
 
     boolean dbWordChecked(String eng) { // My 테이블에 이미 있는 단어라면 true / 없다면 false
