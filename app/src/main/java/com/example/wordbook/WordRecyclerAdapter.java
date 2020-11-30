@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class WordRecyclerAdapter extends RecyclerView.Adapter<WordRecyclerAdapter.ItemViewHolder> {
         private ArrayList<Word> words = new ArrayList<Word>();
@@ -31,8 +32,25 @@ public class WordRecyclerAdapter extends RecyclerView.Adapter<WordRecyclerAdapte
         words.add(word);
     }
 
+    void itemDelete(String eng){
+        for(Word word : words){
+            if(word.getEngWord().equals(eng)){
+                words.remove(word);
+                break;
+            }
+        }
+    }
+
     void setDeleteChecked(boolean deleteChecked){
         this.deleteChecked = deleteChecked;
+    }
+
+    int getSelectCount(){
+        return selectPos.size();
+    }
+
+    ArrayList<String> selReturn(){
+        return selectPos;
     }
 
 
@@ -67,6 +85,8 @@ public class WordRecyclerAdapter extends RecyclerView.Adapter<WordRecyclerAdapte
         }
 
     }
+
+
 
     @Override
     public int getItemCount() {

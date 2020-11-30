@@ -3,6 +3,7 @@ package com.example.wordbook;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -65,9 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
     void alertDlg(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("나의 단어장").setMessage("저장된 단어가 없습니다.");
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+        builder.setMessage("저장된 단어가 없습니다.");
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        builder.show();
     }
 
     @Override

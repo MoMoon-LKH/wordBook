@@ -12,4 +12,9 @@
 
     </style>
 
+    <style name= "MenuTextStyle"
+        parent = "@style/Theme.AppCompat">
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

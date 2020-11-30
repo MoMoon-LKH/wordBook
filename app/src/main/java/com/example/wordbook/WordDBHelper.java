@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 
 
 public class WordDBHelper extends SQLiteOpenHelper {
@@ -48,7 +49,7 @@ public class WordDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE1);
+            db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE1);
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE2);
         db.execSQL("drop table if exists " + WordContract.WordEntry.TABLE_MY);
         Log.d("db","DB Drop");
@@ -87,6 +88,16 @@ public class WordDBHelper extends SQLiteOpenHelper {
         contentValues.put(WordContract.WordEntry.COL_KR,kr);
 
         db.insert(table,null,contentValues);
+    }
+
+    boolean dbDelete(SQLiteDatabase db, String table, String word){
+        try {
+
+            return db.delete(table, WordContract.WordEntry.COL_ENG + "= '" + word +"'",null) > 0;
+       }catch(Exception e){
+            Log.d("delete", "삭제 실패");
+        }
+        return false;
     }
 
     public Cursor recordReadCursor1(SQLiteDatabase db){
