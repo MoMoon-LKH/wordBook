@@ -1,6 +1,7 @@
 package com.example.wordbook;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -21,6 +22,7 @@ public class myWord extends AppCompatActivity {
     WordDBHelper wordDBHelper;
     Cursor cursor;
     Toolbar toolbar;
+    Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +48,10 @@ public class myWord extends AppCompatActivity {
         getDbData();
         adapter.notifyDataSetChanged();
 
+        menu = toolbar.getMenu();
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
 
     }
 
@@ -75,8 +79,12 @@ public class myWord extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.menuDelete :
-
+                deleteBtn();
                 return true;
+            case R.id.menuOK :
+                okBtn();
+                return true;
+
         }
 
         return false;
@@ -88,5 +96,20 @@ public class myWord extends AppCompatActivity {
         db.close();
         wordDBHelper.close();
         super.onDestroy();
+    }
+
+    void deleteBtn(){
+        menu.clear();
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.mymenu2,menu);
+        adapter.setDeleteChecked(true);
+    }
+
+    void okBtn(){
+        menu.clear();
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.mymenu,menu);
+        adapter.setDeleteChecked(false);
+        adapter.notifyDataSetChanged();
     }
 }

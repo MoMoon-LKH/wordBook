@@ -15,31 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2270f608-2afa-42f9-8a00-e24baa26ca24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/trash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/trash_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/mymenu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/mymenu2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/RecyclerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/RecyclerAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/WordRecyclerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/WordRecyclerAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/myWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/myWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/wordList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/wordList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/wordScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wordbook/wordScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_word.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_word.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_word_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_word_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_word_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_word_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_my.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_my.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="C:/AndroidStudio/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/menu" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -100,18 +81,19 @@
     <key name="android.template.-407359156">
       <recent name="com.example.wordbook" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Public\projects\wordBook\app\src\main\res\drawable" />
-      <recent name="C:\Users\Public\projects\wordBook\app\src\main\res\drawable-v24" />
+    <key name="android.template.-1254261051">
+      <recent name="com.example.wordbook" />
     </key>
     <key name="android.template.-734864154">
       <recent name="com.example.wordbook" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Public\projects\wordBook\app\src\main\res\menu" />
       <recent name="C:\Users\Public\projects\wordBook\app\src\main\res\drawable" />
     </key>
-    <key name="android.template.-1254261051">
-      <recent name="com.example.wordbook" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Public\projects\wordBook\app\src\main\res\drawable" />
+      <recent name="C:\Users\Public\projects\wordBook\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunManager">
@@ -200,10 +182,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606048491022" />
-    <state x="543" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1606543856352">
+    <state x="543" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1606724564674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="543" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606543856352" />
+    <state x="543" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606724564674" />
     <state x="280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606278924063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -232,22 +214,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="525" y="129" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606376457018" />
-    <state width="1491" height="213" key="GridCell.Tab.0.bottom" timestamp="1606542229931">
+    <state width="1491" height="213" key="GridCell.Tab.0.bottom" timestamp="1606724850284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606542229931" />
-    <state width="1491" height="213" key="GridCell.Tab.0.center" timestamp="1606542229931">
+    <state width="1491" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606724850284" />
+    <state width="1491" height="213" key="GridCell.Tab.0.center" timestamp="1606724850284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="213" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606542229931" />
-    <state width="1491" height="213" key="GridCell.Tab.0.left" timestamp="1606542229931">
+    <state width="1491" height="213" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606724850284" />
+    <state width="1491" height="213" key="GridCell.Tab.0.left" timestamp="1606724850284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="213" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606542229931" />
-    <state width="1491" height="213" key="GridCell.Tab.0.right" timestamp="1606542229931">
+    <state width="1491" height="213" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606724850284" />
+    <state width="1491" height="213" key="GridCell.Tab.0.right" timestamp="1606724850284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="213" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606542229931" />
+    <state width="1491" height="213" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606724850284" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1604471183565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
