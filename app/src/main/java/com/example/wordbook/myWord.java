@@ -59,13 +59,13 @@ public class myWord extends AppCompatActivity {
 
     }
 
-    void getDbData(){
+    void getDbData() {
         cursor = wordDBHelper.recordReadCursorMy(db);
 
-        while(cursor.moveToNext()){
+        while (cursor.moveToNext()){
             String eng = cursor.getString(cursor.getColumnIndexOrThrow(WordContract.WordEntry.COL_ENG));
             String kr = cursor.getString(cursor.getColumnIndexOrThrow(WordContract.WordEntry.COL_KR));
-            adapter.itemAdd(new Word(eng,kr));
+            adapter.itemAdd(new Word(eng, kr));
         }
     }
 
@@ -94,13 +94,7 @@ public class myWord extends AppCompatActivity {
         return false;
     }
 
-    @Override
-    protected void onDestroy() {
-        cursor.close();
-        db.close();
-        wordDBHelper.close();
-        super.onDestroy();
-    }
+
 
     void deleteBtn(){
         menu.clear();
@@ -143,4 +137,13 @@ public class myWord extends AppCompatActivity {
         }
 
     }
+
+    @Override
+    protected void onDestroy() {
+        cursor.close();
+        db.close();
+        wordDBHelper.close();
+        super.onDestroy();
+    }
+
 }
